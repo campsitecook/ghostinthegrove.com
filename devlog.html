@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Devlog · Ghost in the Grove</title>
+  <meta name="description" content="Development notes for Ghost in the Grove.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="./">Ghost in the Grove</a>
+      <nav>
+        <a href="./#about">About</a>
+        <a href="./#features">Features</a>
+        <a href="./#screenshots">Screenshots</a>
+        <a href="devlog.html" aria-current="page">Devlog</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <div class="page-head">
+      <h1>Devlog</h1>
+      <p>Notes from development, newest first.</p>
+    </div>
+
+    <!-- New entries go here, above the older ones. -->
+    <article>
+      <time datetime="2026-11-20">20 November 2026</time>
+      <h2>From bare island to a village</h2>
+      <p>Two days of playtesting turned into a lot of changes. The island finally looks
+        like the paintings it's based on, and there's much more to build.</p>
+      <figure>
+        <img src="images/meadow_camp.jpg" alt="A settler in a painted meadow, looking down at a camp of huts and a smithy" loading="lazy">
+      </figure>
+      <ul>
+        <li><strong>A real settler.</strong> Players are now a hand-made, rigged character
+          who walks, runs, jumps, chops trees and mines rock.</li>
+        <li><strong>A painted look.</strong> Ink outlines, hand-painted textures on every
+          building piece, and painted ground: meadow grass, sand, rock, and leaf litter
+          under the oaks. Ground you dig or flatten turns to bare earth.</li>
+        <li><strong>A first shelter by hand.</strong> Pull sticks from a tree with bare
+          hands and lash them into floors and walls, then top the hut with thatch, all
+          before you own a single tool.</li>
+        <li><strong>Roofs and gables</strong> in thatch and wooden shingles.</li>
+        <li><strong>The smithy.</strong> A rune-stone forge, plus an anvil, bellows and
+          smithing bench that unlock and improve what it makes. Workshops are placed freely,
+          at any angle, rather than snapped to the grid.</li>
+        <li><strong>Land claims.</strong> A claim post keeps the land around it yours: nobody
+          else can build, dig or gather there.</li>
+        <li><strong>A new pack</strong> with slots and item icons, and a crafting screen that
+          shows what you'll get before you make it.</li>
+      </ul>
+      <figure>
+        <img src="images/smithy.jpg" alt="A rune-stone forge on a stone floor, with bellows, an anvil, a smithing bench and a claim post" loading="lazy">
+      </figure>
+      <p>The bots that test the server now build their own camps too: a thatched shelter,
+        a smithy and a timber hut, each on land they've claimed. The camps in these
+        screenshots are theirs.</p>
+    </article>
+
+    <article>
+      <time datetime="2026-11-18">18 November 2026</time>
+      <h2>The first playtest server is up</h2>
+      <p>The prototype has all the pieces of the core loop: gather resources with random
+        quality stats, craft tools and materials whose stats depend on what went in, and
+        build with snapping pieces on a procedurally generated island. Now it's time to
+        find out whether that's fun with friends.</p>
+      <p>Getting there meant a lot of plumbing:</p>
+      <ul>
+        <li>A <strong>dedicated server</strong> running on a small Linux machine, which
+          saves the world and restarts on its own.</li>
+        <li><strong>Bots</strong> that join like real players and gather, craft and build
+          by themselves. Thirty of them at once barely made the server sweat.</li>
+        <li>A game that <strong>updates itself</strong> from the start screen, with
+          signed builds so nobody can slip in a fake update.</li>
+        <li>A <strong>server list</strong>, so nobody has to type an IP address.</li>
+      </ul>
+      <p>Next: watching people play, and fixing whatever they find.</p>
+    </article>
+  </main>
+
+  <footer>
+    <div class="wrap">© 2026 Ghost in the Grove</div>
+  </footer>
+</body>
+</html>
